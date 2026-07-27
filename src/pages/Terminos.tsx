@@ -9,7 +9,7 @@ export default function Terminos() {
   );
 
   return (
-    <section className="bg-cream px-6 py-16">
+    <section className="bg-cream px-6 py-10">
       <div className="mx-auto max-w-3xl">
         <p className="mb-3 text-xs font-bold tracking-[0.15em] text-grass uppercase">Legal</p>
         <h1 className="mb-3 text-[clamp(2rem,4.4vw,3rem)] font-extrabold tracking-tight text-grass">

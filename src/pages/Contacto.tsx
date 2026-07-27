@@ -70,7 +70,7 @@ export default function Contacto() {
 
   return (
     <>
-      <section className="bg-cream px-6 pt-16 pb-14 text-center">
+      <section className="bg-cream px-6 pt-10 pb-14 text-center">
         <div className="mx-auto max-w-2xl">
           <p className="mb-3 text-xs font-bold tracking-[0.15em] text-grass uppercase">Contacto</p>
           <h1 className="mb-4 text-[clamp(2.1rem,4.8vw,3.5rem)] font-extrabold tracking-tight text-grass">

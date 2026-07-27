@@ -19,7 +19,7 @@ export default function Aliados() {
 
   return (
     <>
-      <section className="bg-cream px-6 pt-16 pb-14">
+      <section className="bg-cream px-6 pt-10 pb-14">
         <div className="mx-auto max-w-3xl">
           <p className="mb-3 text-xs font-bold tracking-[0.15em] text-grass uppercase">
             Niveles de alianza

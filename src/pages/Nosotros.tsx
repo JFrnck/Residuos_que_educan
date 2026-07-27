@@ -73,7 +73,7 @@ export default function Nosotros() {
 
   return (
     <>
-      <section className="bg-cream px-6 pt-16 pb-14">
+      <section className="bg-cream px-6 pt-10 pb-14">
         <div className="mx-auto max-w-3xl">
           <p className="mb-3 text-xs font-bold tracking-[0.15em] text-grass uppercase">Nosotros</p>
           <h1 className="mb-7 text-[clamp(2.25rem,5vw,3.6rem)] font-extrabold tracking-tight text-grass">

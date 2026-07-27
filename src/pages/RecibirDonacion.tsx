@@ -45,7 +45,7 @@ export default function RecibirDonacion() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-cream px-6 pt-16 pb-16 text-center">
+      <section className="relative overflow-hidden bg-cream px-6 pt-10 pb-16 text-center">
         <PatternBackground opacity={0.12} />
         <div className="relative mx-auto max-w-2xl">
           <p className="mb-3 text-xs font-bold tracking-[0.15em] text-grass uppercase">
