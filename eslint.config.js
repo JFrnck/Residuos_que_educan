@@ -27,6 +27,7 @@ export default tseslint.config(
     },
     rules: {
       "react-compiler/react-compiler": "error",
+      "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     },
   },
 );

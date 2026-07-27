@@ -1,1 +1,42 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --color-cream: #f3e9cc;
+  --color-lime: #9abe3c;
+  --color-grass: #276232;
+  --color-sea: #004b4a;
+  --color-ink: #111111;
+  --color-white: #ffffff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-lime text-ink;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
