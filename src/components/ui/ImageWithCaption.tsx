@@ -17,7 +17,7 @@ export function ImageWithCaption({
 }: ImageWithCaptionProps) {
   return (
     <figure
-      className={cn("relative overflow-hidden rounded-2xl bg-grass/10", className)}
+      className={cn("relative min-w-0 overflow-hidden rounded-2xl bg-grass/10", className)}
       style={{ aspectRatio: aspect }}
     >
       <img src={src} alt={alt} loading="lazy" className="h-full w-full object-cover" />

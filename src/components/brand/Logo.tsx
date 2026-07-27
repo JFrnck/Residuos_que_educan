@@ -21,7 +21,7 @@ export function Logo({ variant = "color", className }: LogoProps) {
       <img
         src="/images/logo.jpg"
         alt="Residuos que Educan"
-        className={cn("h-11 w-auto mix-blend-multiply", className)}
+        className={cn("h-16 w-auto mix-blend-multiply", className)}
       />
     );
   }

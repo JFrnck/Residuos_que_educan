@@ -316,6 +316,7 @@ export default function RecibirDonacion() {
             src="/images/foto-a.jpg"
             alt="Campaña de acopio en colegio aliado"
             caption="Campaña de acopio en colegio aliado"
+            aspect="auto"
             className="h-full min-h-[320px]"
           />
         </div>
