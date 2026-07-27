@@ -37,7 +37,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-cream px-6 pt-10 pb-20 sm:pt-20 sm:pb-24">
+      <section className="relative overflow-hidden bg-cream px-6 pt-10 pb-20 sm:pt-6 sm:pb-24">
         <PatternBackground opacity={0.12} />
         <div className="relative mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <Reveal>
