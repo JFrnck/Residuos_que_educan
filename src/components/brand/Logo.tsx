@@ -6,20 +6,17 @@ type LogoProps = {
 };
 
 /**
- * El archivo fuente (public/images/logo.jpg) es el lockup horizontal real de
- * la marca sobre fondo blanco. Sobre fondos claros se muestra tal cual con
- * mix-blend-mode:multiply para que el blanco desaparezca. Sobre fondos oscuros
- * (footer, bloques `sea`) el multiply no funciona: el trazo verde perdería
- * contraste, así que se usa el wordmark en texto — el mismo criterio que el
- * prototipo de diseño aplica en su footer.
- * // TODO: reemplazar por el isotipo en SVG/PNG transparente cuando el
- * cliente lo entregue, sin cambiar la API de este componente.
+ * El archivo fuente (public/images/logo.png) es el lockup horizontal real de
+ * la marca en PNG transparente. Sobre fondos oscuros (footer, bloques `sea`)
+ * el trazo verde fijo del isotipo perdería contraste, así que ahí se usa el
+ * wordmark en texto — el mismo criterio que el prototipo de diseño aplica en
+ * su footer.
  */
 export function Logo({ variant = "color", className }: LogoProps) {
   if (variant === "color") {
     return (
       <img
-        src="/images/logo.jpg"
+        src="/images/logo.png"
         alt="Residuos que Educan"
         className={cn("h-16 w-auto mix-blend-multiply", className)}
       />

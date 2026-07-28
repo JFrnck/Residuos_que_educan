@@ -6,7 +6,7 @@ fueron redimensionadas a un máximo de 1600px en el lado más largo para web.
 
 | Archivo | Usado en | Caption / alt |
 |---|---|---|
-| `logo.jpg` | Header, menú móvil (`Logo` variant `color`) | Residuos que Educan |
+| `logo.png` | Header, menú móvil (`Logo` variant `color`) | Residuos que Educan |
 | `foto-b.jpg` | `/nosotros` — "Quién lo lidera" | Presentación del modelo Residuos que Educan |
 | `utp.jpg` | `/nosotros` — Trayectoria del equipo | Donación de residuos — Universidad UTP |
 | `camara-comercio.jpg` | `/nosotros` — Trayectoria del equipo | Presentación del modelo en la Cámara de Comercio de Arequipa |
@@ -21,11 +21,10 @@ fueron redimensionadas a un máximo de 1600px en el lado más largo para web.
   recursos entregados. Mientras tanto, el hero usa la ilustración animada
   `src/assets/illustrations/student.svg` como placeholder.
   // TODO: reemplazar por una foto real de un Aula de Innovación en uso.
-- El isotipo de marca se usa como imagen raster (`logo.jpg`) con
-  `mix-blend-mode: multiply` sobre fondos claros; sobre fondos oscuros
-  (footer) se usa el wordmark en texto en vez de la imagen, porque el
-  archivo no tiene fondo transparente. // TODO: pedir el isotipo en SVG
-  vectorial para reemplazar `src/components/brand/Logo.tsx`.
+- El isotipo de marca ya se usa como PNG transparente (`logo.png`). Sobre
+  fondos oscuros (footer, bloques `sea`) se sigue usando el wordmark en
+  texto en vez de la imagen, porque el trazo del isotipo es verde fijo y
+  perdería contraste ahí.
 - `src/assets/illustrations/student.svg` y `study-discussion.svg` pesan
   ~400 KB y ~240 KB respectivamente (ilustraciones animadas por SMIL). Ya
   están en un chunk separado por code-splitting de rutas, pero si se busca
