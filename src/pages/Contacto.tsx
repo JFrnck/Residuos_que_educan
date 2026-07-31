@@ -89,9 +89,7 @@ export default function Contacto() {
                 <p className="mb-6 text-[15.5px] leading-relaxed">
                   Gracias por escribirnos. Te contactaremos a la brevedad.
                 </p>
-                <Button href={contact.whatsappUrl} target="_blank" rel="noopener">
-                  Escribir por WhatsApp
-                </Button>
+                <Button href={`mailto:${contact.email}`}>Escribir un correo</Button>
               </Card>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-5">
@@ -245,26 +243,10 @@ export default function Contacto() {
               <ul className="flex flex-col gap-4 text-[15px]">
                 <li>
                   <span className="mb-1 block text-xs font-bold tracking-wide text-lime uppercase">
-                    WhatsApp
-                  </span>
-                  <a href={contact.whatsappUrl} target="_blank" rel="noopener" className="hover:text-lime">
-                    {contact.phoneDisplay}
-                  </a>
-                </li>
-                <li>
-                  <span className="mb-1 block text-xs font-bold tracking-wide text-lime uppercase">
                     Correo
                   </span>
                   <a href={`mailto:${contact.email}`} className="hover:text-lime">
                     {contact.email}
-                  </a>
-                </li>
-                <li>
-                  <span className="mb-1 block text-xs font-bold tracking-wide text-lime uppercase">
-                    Teléfono
-                  </span>
-                  <a href={`tel:${contact.phoneTel}`} className="hover:text-lime">
-                    {contact.phoneDisplay}
                   </a>
                 </li>
                 <li>
@@ -296,9 +278,7 @@ export default function Contacto() {
               <p className="mb-5 text-sm leading-relaxed text-ink/75">
                 Te presentamos el modelo a detalle y resolvemos tus preguntas.
               </p>
-              <Button href={contact.whatsappUrl} target="_blank" rel="noopener">
-                Escribir por WhatsApp
-              </Button>
+              <Button href={`mailto:${contact.email}`}>Escribir un correo</Button>
             </Card>
           </div>
         </div>

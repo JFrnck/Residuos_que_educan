@@ -7,11 +7,12 @@ fueron redimensionadas a un máximo de 1600px en el lado más largo para web.
 | Archivo | Usado en | Caption / alt |
 |---|---|---|
 | `logo.png` | Header, menú móvil (`Logo` variant `color`) | Residuos que Educan |
-| `foto-b.jpg` | `/nosotros` — "Quién lo lidera" | Presentación del modelo Residuos que Educan |
+| `adolfo-quisocala.jpg` | `/nosotros` — "Quién lo lidera" | José Adolfo Quisocala, fundador (recorte de `resources/img/DSC07810.JPG` con `sharp`) |
+| `ojos-planeta.jpg` | `/nosotros` — Campaña "Ojos por el Planeta" | Medición visual a persona adulta mayor (de `resources/img/_DSC9140.jpg`) |
 | `utp.jpg` | `/nosotros` — Trayectoria del equipo | Donación de residuos — Universidad UTP |
 | `camara-comercio.jpg` | `/nosotros` — Trayectoria del equipo | Presentación del modelo en la Cámara de Comercio de Arequipa |
 | `capacitacion.jpg` | `/como-funciona` — El Aula de Innovación completa | Capacitación a docentes |
-| `kolekt.jpg` | `/aliados` — Trazabilidad total con Kolekt | App de Kolekt — trazabilidad |
+| `kolekt.jpg` | `/aliados` y `/` (Trazabilidad total, certificada) | App de Kolekt — trazabilidad |
 | `foto-a.jpg` | `/recibir-donacion` — Formulario de registro | Campaña de acopio en colegio aliado |
 
 ## Pendiente

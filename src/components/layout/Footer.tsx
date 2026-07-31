@@ -59,18 +59,8 @@ export function Footer() {
           <h2 className="mb-4 text-sm font-extrabold tracking-wide text-lime uppercase">Contacto</h2>
           <ul className="flex flex-col gap-2.5 text-sm text-cream/90">
             <li>
-              <a href={contact.whatsappUrl} target="_blank" rel="noopener" className="hover:text-lime">
-                WhatsApp: {contact.phoneDisplay}
-              </a>
-            </li>
-            <li>
               <a href={`mailto:${contact.email}`} className="hover:text-lime">
                 {contact.email}
-              </a>
-            </li>
-            <li>
-              <a href={`tel:${contact.phoneTel}`} className="hover:text-lime">
-                {contact.phoneDisplay}
               </a>
             </li>
             <li>{contact.address}</li>

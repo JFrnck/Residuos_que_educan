@@ -107,7 +107,7 @@ export default function ComoFunciona() {
             kicker="Para empresas"
             title="Así trabajamos con tu empresa — de residuo a impacto en 5 pasos"
           />
-          <StepList steps={businessProcessSteps} className="mt-9" />
+          <StepList steps={businessProcessSteps} accent="sea" className="mt-9" />
         </div>
       </section>
 
@@ -138,7 +138,7 @@ export default function ComoFunciona() {
       <section className="bg-cream px-6 py-20">
         <div className="mx-auto max-w-[1180px]">
           <SectionHeader kicker="Para colegios" title="Cómo puede ser parte un colegio" />
-          <StepList steps={schoolParticipationSteps} columns={5} className="mt-9" />
+          <StepList steps={schoolParticipationSteps} columns={4} accent="grass" className="mt-9" />
           <Button to="/recibir-donacion" size="lg" className="mt-9">
             Registrar mi institución
           </Button>

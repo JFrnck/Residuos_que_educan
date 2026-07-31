@@ -42,9 +42,6 @@ export function Header() {
             <a href={`mailto:${contact.email}`} className="text-cream hover:text-lime">
               {contact.email}
             </a>
-            <a href={`tel:${contact.phoneTel}`} className="text-cream hover:text-lime">
-              {contact.phoneDisplay}
-            </a>
           </div>
           <div className="flex items-center gap-4">
             {social.map(({ label, href }) => {

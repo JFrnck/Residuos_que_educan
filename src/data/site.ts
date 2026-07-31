@@ -10,11 +10,6 @@ export const nav = [
 
 export const contact = {
   email: "direccion@residuosqueeducan.org.pe",
-  phoneDisplay: "+51 973 243 772",
-  phoneTel: "+51973243772",
-  whatsappNumber: "51973243772",
-  whatsappUrl:
-    "https://wa.me/51973243772?text=Hola,%20quiero%20saber%20más%20sobre%20Residuos%20que%20Educan",
   address: "Arequipa, Perú", // TODO: dirección exacta
 } as const;
 

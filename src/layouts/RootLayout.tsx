@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { Outlet, ScrollRestoration } from "react-router";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { WhatsAppFab } from "@/components/layout/WhatsAppFab";
 
 export function RootLayout() {
   return (
@@ -14,7 +13,6 @@ export function RootLayout() {
         </Suspense>
       </main>
       <Footer />
-      <WhatsAppFab />
       <ScrollRestoration />
     </div>
   );

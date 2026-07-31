@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { PatternBackground } from "@/components/brand/PatternBackground";
 import { Button } from "@/components/ui/Button";
-import { contact } from "@/data/site";
 
 type FinalCTAProps = {
   title: string;
@@ -21,9 +20,6 @@ export function FinalCTA({ title, text, children }: FinalCTAProps) {
         <div className="flex flex-wrap justify-center gap-3.5">
           <Button to="/contacto" variant="onDark" size="lg">
             Agendar una reunión
-          </Button>
-          <Button href={contact.whatsappUrl} target="_blank" rel="noopener" variant="onDarkOutline" size="lg">
-            Escribir por WhatsApp
           </Button>
         </div>
         {children}

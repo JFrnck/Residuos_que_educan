@@ -71,10 +71,7 @@ export default function Terminos() {
 
           <section>
             <h2 className="mb-2 text-xl font-extrabold text-grass">6. Contacto</h2>
-            <p>
-              Para consultas sobre estos términos, escríbenos a {contact.email} o llámanos al{" "}
-              {contact.phoneDisplay}.
-            </p>
+            <p>Para consultas sobre estos términos, escríbenos a {contact.email}.</p>
           </section>
         </div>
       </div>

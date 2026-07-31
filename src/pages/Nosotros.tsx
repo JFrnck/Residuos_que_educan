@@ -20,16 +20,17 @@ const trajectoryPartners = [
   "UGEL Arequipa Sur",
 ];
 
+const eyeCampaign = {
+  title: "Campaña “Ojos por el Planeta”",
+  description:
+    "En alianza con la empresa social DOT Glasses (República Checa) y la Comisaría de la Policía Nacional del Perú de Ciudad Municipal (Arequipa), realizamos mediciones visuales y entregamos lentes personalizados a más de 60 personas adultas mayores.",
+};
+
 const impactActions = [
   {
     title: "Implementación tecnológica",
     description:
       "Sistema de videovigilancia para la I.E. Manuel Muñoz Najar. Sistema digital de control de asistencia para las I.E. Nicanor Rivera Cáceres e Independencia Americana.",
-  },
-  {
-    title: "Campaña “Ojo con el Planeta”",
-    description:
-      "En alianza con la empresa social DOT Glasses (República Checa) y la Comisaría de la Policía Nacional del Perú de Ciudad Municipal (Arequipa), realizamos mediciones visuales y entregamos lentes personalizados a personas adultas mayores.",
   },
   {
     title: "Articulación institucional",
@@ -127,10 +128,9 @@ export default function Nosotros() {
           </p>
           <Card className="grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
             <ImageWithCaption
-              src="/images/foto-b.jpg"
-              alt="Presentación del modelo Residuos que Educan"
-              caption="Presentación del modelo — de residuos a impacto en 5 pasos"
-              aspect="4/3"
+              src="/images/adolfo-quisocala.jpg"
+              alt="José Adolfo Quisocala, fundador de Residuos que Educan"
+              aspect="4/5"
             />
             <div>
               <h2 className="mb-3.5 text-[1.6rem] font-extrabold text-grass">
@@ -198,7 +198,18 @@ export default function Nosotros() {
             positivo de la tecnología, la sostenibilidad y la articulación entre organizaciones
             públicas y privadas.
           </p>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <Card className="mb-6 grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
+            <ImageWithCaption
+              src="/images/ojos-planeta.jpg"
+              alt="Campaña Ojos por el Planeta — medición visual a persona adulta mayor"
+              aspect="4/3"
+            />
+            <div>
+              <h3 className="mb-3 text-lg font-extrabold text-grass">{eyeCampaign.title}</h3>
+              <p className="text-[15.5px] leading-relaxed">{eyeCampaign.description}</p>
+            </div>
+          </Card>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {impactActions.map((action) => (
               <Card key={action.title}>
                 <h3 className="mb-3 text-lg font-extrabold text-grass">{action.title}</h3>

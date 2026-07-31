@@ -1,23 +1,34 @@
+import { FaAward, FaChartLine, FaFileInvoiceDollar, FaHandshake } from "react-icons/fa6";
 import { PatternBackground } from "@/components/brand/PatternBackground";
 import { IllustrationSvg } from "@/components/brand/IllustrationSvg";
 import StudentIllustration from "@/assets/illustrations/student.svg?react";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { DashList } from "@/components/ui/DashList";
+import { ImageWithCaption } from "@/components/ui/ImageWithCaption";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { StepList } from "@/components/ui/StepList";
 import { Reveal } from "@/components/ui/Reveal";
 import { StatBanner } from "@/components/sections/StatBanner";
 import { GoalStats } from "@/components/sections/GoalStats";
+import { TaxDeductionBlock } from "@/components/sections/TaxDeductionBlock";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { homeModelSteps } from "@/data/steps";
+import { closingLine, legalIdentity } from "@/data/site";
 import { useDocumentTitle } from "@/lib/useDocumentTitle";
 
+const companyBenefits = [
+  { icon: FaHandshake, label: "Responsabilidad Social (ESG)" },
+  { icon: FaChartLine, label: "Impacto medible" },
+  { icon: FaAward, label: "Reputación corporativa" },
+  { icon: FaFileInvoiceDollar, label: "Deducción tributaria" },
+];
+
 const heroPills = [
-  "Economía Circular",
-  "Responsabilidad Extendida del Productor",
   "Responsabilidad Social Empresarial",
+  "Economía Circular",
   "Innovación Educativa",
+  "Responsabilidad Extendida del Productor",
 ];
 
 const partnerLogos = [
@@ -162,17 +173,73 @@ export default function Home() {
       </section>
 
       <section className="bg-cream px-6 py-24">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          <ImageWithCaption
+            src="/images/kolekt.jpg"
+            alt="App de Kolekt — trazabilidad"
+            aspect="2/1"
+          />
+          <div>
+            <p className="mb-4 text-xs font-bold tracking-[0.15em] text-grass uppercase">
+              Kolekt es una empresa certificadora internacional de origen holandés
+            </p>
+            <h2 className="mb-6 text-[clamp(1.75rem,3.4vw,2.5rem)] font-extrabold tracking-tight text-grass">
+              Trazabilidad total, certificada
+            </h2>
+            <DashList
+              items={[
+                "Cada kilo donado queda registrado y es 100% trazable, de principio a fin.",
+                "Certificado de recuperación de residuos por empresa, tipo crédito ambiental.",
+                <>
+                  <strong>Sello físico y virtual con código QR:</strong> cualquier persona que lo
+                  escanee accede a fotos, testimonios y datos reales de cómo los residuos de tu
+                  empresa se convirtieron en educación.
+                </>,
+              ]}
+            />
+            <Button to="/aliados" size="lg" className="mt-8">
+              Ver niveles de alianza
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-24">
+        <div className="mx-auto max-w-[1180px]">
+          <SectionHeader kicker="Beneficios" title="Beneficios para tu empresa" />
+          <TaxDeductionBlock className="mt-9 rounded-2xl" />
+          <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
+            {companyBenefits.map(({ icon: Icon, label }) => (
+              <div key={label} className="flex flex-col items-center gap-3 text-center">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-lime/25 text-grass">
+                  <Icon aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <p className="text-sm font-semibold text-ink/80">{label}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-9 text-sm text-ink/55">
+            {legalIdentity.ruc} · {legalIdentity.resolution}
+          </p>
+          <Button to="/beneficios" variant="secondary" size="lg" className="mt-6">
+            Ver todos los beneficios
+          </Button>
+        </div>
+      </section>
+
+      <section className="bg-cream px-6 py-24">
         <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-7 lg:grid-cols-2">
           <Card tone="sea" className="p-11">
             <p className="mb-3.5 text-xs font-bold tracking-[0.15em] text-lime uppercase">
               Para empresas
             </p>
             <h3 className="mb-4 text-[1.9rem] leading-tight font-extrabold tracking-tight text-white">
-              Cumple la Ley REP y genera impacto medible
+              Convierte tu Responsabilidad Social en aulas reales
             </h3>
             <p className="mb-7 text-[16.5px] leading-relaxed">
-              Cumple la Ley REP, fortalece tu RSE y genera impacto medible con trazabilidad
-              certificada.
+              Transforma los residuos que tu empresa ya genera en impacto social medible:
+              fortalece tu estrategia ESG y de Responsabilidad Social, con trazabilidad
+              certificada — y de paso, avanza en tu cumplimiento de la Ley REP.
             </p>
             <Button to="/aliados" variant="onDark">
               Ver niveles de alianza
@@ -218,8 +285,8 @@ export default function Home() {
       </section>
 
       <FinalCTA
-        title="No es solo cumplir. Es liderar."
-        text="Escríbenos para agendar una reunión y ver cómo tu empresa se convierte en aliada."
+        title={closingLine}
+        text="Súmate como aliado — agenda una reunión de 15 minutos y te mostramos cómo tu empresa (o tu organización) puede ser parte del cambio."
       />
     </>
   );

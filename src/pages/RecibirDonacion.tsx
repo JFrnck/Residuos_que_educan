@@ -62,9 +62,6 @@ export default function RecibirDonacion() {
             <Button href="#formulario" size="lg">
               Regístrate ahora
             </Button>
-            <Button href={contact.whatsappUrl} target="_blank" rel="noopener" variant="secondary" size="lg">
-              Enviar mensaje por WhatsApp
-            </Button>
           </div>
         </div>
       </section>
@@ -93,7 +90,7 @@ export default function RecibirDonacion() {
       <section className="bg-cream px-6 py-20">
         <div className="mx-auto max-w-[1180px]">
           <SectionHeader kicker="Muy sencillo" title="Participar es muy sencillo" />
-          <StepList steps={schoolParticipationSteps} className="mt-9" />
+          <StepList steps={schoolParticipationSteps} columns={4} className="mt-9" />
           <p className="mt-8 inline-block rounded-full bg-lime/25 px-5 py-2.5 text-sm font-extrabold text-grass">
             La inscripción al programa es completamente gratuita.
           </p>
@@ -117,9 +114,7 @@ export default function RecibirDonacion() {
                 <p className="mb-6 text-[15.5px] leading-relaxed">
                   Te contactaremos en un plazo máximo de 5 días hábiles.
                 </p>
-                <Button href={contact.whatsappUrl} target="_blank" rel="noopener">
-                  Escribir por WhatsApp
-                </Button>
+                <Button href={`mailto:${contact.email}`}>Escribir un correo</Button>
               </Card>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} noValidate className="mt-9 flex flex-col gap-5">

@@ -91,23 +91,23 @@ export const businessProcessSteps: Step[] = [
 ];
 
 export const schoolParticipationSteps: Step[] = [
-  { number: 1, title: "Registro", description: "Registrar la institución educativa." },
+  { number: 1, title: "Registro", description: "Registra tu institución educativa." },
   {
     number: 2,
     title: "Evaluación",
     description: "Nuestro equipo evalúa las necesidades tecnológicas.",
   },
-  { number: 3, title: "Ingreso", description: "La institución ingresa al programa." },
   {
-    number: 4,
-    title: "Financiamiento",
+    number: 3,
+    title: "Implementación",
     description:
-      "Las empresas patrocinadoras financian la implementación mediante la valorización de residuos.",
+      "La empresa aliada financia el Aula de Innovación mediante la valorización de sus residuos, y se instala la tecnología en tu colegio.",
   },
   {
-    number: 5,
-    title: "Entrega",
-    description: "El colegio recibe tecnología y equipamiento.",
+    number: 4,
+    title: "El colegio cierra el ciclo",
+    description:
+      "Tu institución recolecta sus propios residuos y sostiene el modelo en el tiempo, dando continuidad al Aula.",
   },
 ];
 

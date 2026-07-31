@@ -134,7 +134,7 @@ export default function Aliados() {
         <p className="mt-10 text-sm text-cream/80">
           José Adolfo Quisocala — Fundador, Residuos que Educan
           <br />
-          {contact.phoneDisplay} · {contact.email}
+          {contact.email}
         </p>
       </FinalCTA>
     </>

@@ -13,12 +13,12 @@ export const benefitBlocks = [
   {
     title: "Para las Empresas",
     items: [
-      "Cumplimiento de la Responsabilidad Extendida del Productor (REP)",
-      "Fortalecimiento de la Responsabilidad Social Empresarial",
-      "Gestión sostenible de residuos",
-      "Evidencia del impacto social generado",
-      "Contribución a los Objetivos de Desarrollo Sostenible",
+      "Fortalecimiento de la Responsabilidad Social Empresarial (ESG)",
+      "Evidencia del impacto social generado, con reporte certificado",
+      "Contribución a los Objetivos de Desarrollo Sostenible (ODS)",
       "Mejora de la reputación corporativa",
+      "Gestión sostenible de residuos",
+      "Aporte adicional al cumplimiento de la Ley REP",
     ],
   },
   {

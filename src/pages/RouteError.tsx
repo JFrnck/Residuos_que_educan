@@ -6,7 +6,7 @@ export default function RouteError() {
       <p className="text-sm font-bold tracking-[0.15em] text-grass uppercase">Ocurrió un error</p>
       <h1 className="text-3xl font-extrabold text-grass">Algo no salió como esperábamos</h1>
       <p className="max-w-md text-ink/75">
-        Intenta recargar la página. Si el problema continúa, escríbenos por WhatsApp.
+        Intenta recargar la página. Si el problema continúa, escríbenos por correo.
       </p>
       <Button href="/">Volver al inicio</Button>
     </div>
