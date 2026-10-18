@@ -1,8 +1,7 @@
 import { FaAward, FaChartLine, FaFileInvoiceDollar, FaHandshake } from "react-icons/fa6";
 import { PatternBackground } from "@/components/brand/PatternBackground";
-import { IllustrationSvg } from "@/components/brand/IllustrationSvg";
-import StudentIllustration from "@/assets/illustrations/student.svg?react";
 import { Button } from "@/components/ui/Button";
+import { PhotoCarousel, type CarouselPhoto } from "@/components/ui/PhotoCarousel";
 import { Card } from "@/components/ui/Card";
 import { DashList } from "@/components/ui/DashList";
 import { ImageWithCaption } from "@/components/ui/ImageWithCaption";
@@ -31,13 +30,39 @@ const heroPills = [
   "Responsabilidad Extendida del Productor",
 ];
 
+const heroPhotos: CarouselPhoto[] = [
+  {
+    src: "/images/home/hero-1-estudiantes.webp",
+    alt: "Fundador de Residuos que Educan abrazado con estudiantes de un colegio público",
+  },
+  {
+    src: "/images/home/hero-2-campana-colegio.webp",
+    alt: "Estudiantes y docentes junto a las bolsas de residuos recolectadas en una campaña escolar",
+  },
+  {
+    src: "/images/home/hero-3-capacitacion-docentes.webp",
+    alt: "Capacitación a docentes en el uso de pizarras interactivas",
+  },
+  {
+    src: "/images/home/hero-4-planta-reciclaje.webp",
+    alt: "Equipo de Residuos que Educan con recicladoras en una planta de valorización",
+  },
+  {
+    src: "/images/home/hero-5-aula-innovacion.webp",
+    alt: "Estudiante resolviendo un ejercicio en la pizarra interactiva de un Aula de Innovación",
+  },
+];
+
+const KUNAN_ARTICLE_URL = "https://www.mercadonegro.pe/actualidad/desafio-kunan-2026/";
+
 const partnerLogos = [
-  "logo empresa",
-  "logo municipalidad",
-  "logo ministerio",
-  "logo UGEL",
-  "recicladores formalizados",
-  "organización cooperante",
+  { src: "/images/aliados/desafio-kunan-2026.webp", name: "Desafío Kunan 2026" },
+  { src: "/images/aliados/kunan.webp", name: "Kunan — Perú Sostenible" },
+  { src: "/images/aliados/michell.webp", name: "Michell & Cía." },
+  { src: "/images/aliados/municipalidad-arequipa.webp", name: "Municipalidad Provincial de Arequipa" },
+  { src: "/images/aliados/ugel-arequipa-norte.webp", name: "UGEL Arequipa Norte" },
+  { src: "/images/aliados/ugel-arequipa-sur.webp", name: "UGEL Arequipa Sur" },
+  { src: "/images/aliados/simplybook.webp", name: "SimplyBook.me" },
 ];
 
 export default function Home() {
@@ -55,8 +80,11 @@ export default function Home() {
             <p className="mb-2.5 text-xs font-bold tracking-[0.15em] text-grass uppercase">
               Economía circular que transforma la educación pública
             </p>
-            <p className="mb-5 text-sm font-semibold text-sea">
+            <p className="mb-1 text-sm font-semibold text-sea">
               Proyecto nacional 2026–2030, en marcha desde Arequipa
+            </p>
+            <p className="mb-5 text-sm font-extrabold text-grass">
+              {legalIdentity.initiativeOf}
             </p>
             <h1 className="mb-5 text-[clamp(2.25rem,4.6vw,3.75rem)] leading-[1.03] font-extrabold tracking-tight text-grass text-balance">
               Transformamos residuos en tecnología para la educación pública
@@ -89,11 +117,12 @@ export default function Home() {
             </div>
           </Reveal>
 
-          <Reveal
-            delay={0.15}
-            className="relative min-h-[380px] overflow-hidden rounded-3xl border border-grass/15 bg-gradient-to-br from-white via-cream to-lime/30 p-8"
-          >
-            <IllustrationSvg as={StudentIllustration} title="Estudiante con laptop" />
+          <Reveal delay={0.15}>
+            <PhotoCarousel
+              photos={heroPhotos}
+              label="Fotos de Residuos que Educan"
+              className="aspect-[4/3] w-full border border-grass/15"
+            />
           </Reveal>
         </div>
       </section>
@@ -106,6 +135,40 @@ export default function Home() {
         tecnología, capacitación docente y montaje. Con la donación agregada de varias empresas,
         el proyecto financia progresivamente más aulas cada año, en más regiones del país.
       </StatBanner>
+
+      <section className="bg-white px-6 py-24">
+        <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          <ImageWithCaption
+            src="/images/home/kunan-2026-premio.webp"
+            alt="Residuos que Educan recibe el premio de S/ 15,000 como ganador de Educación con Impacto en el Desafío Kunan 2026"
+            aspect="3/2"
+          />
+          <div>
+            <img
+              src="/images/aliados/desafio-kunan-2026.webp"
+              alt="Desafío Kunan 2026"
+              loading="lazy"
+              className="mb-5 h-14 w-auto"
+            />
+            <h2 className="mb-5 text-[clamp(1.75rem,3.4vw,2.5rem)] leading-tight font-extrabold tracking-tight text-grass">
+              ¡Ganamos el Desafío Kunan 2026!
+            </h2>
+            <p className="mb-4 text-[17px] leading-relaxed">
+              Residuos que Educan fue reconocido como ganador en la categoría{" "}
+              <strong>Educación con Impacto</strong>, destacando nuestro modelo innovador que
+              transforma residuos valorizables en oportunidades educativas.
+            </p>
+            <p className="mb-7 text-[17px] leading-relaxed">
+              Este reconocimiento reafirma nuestro compromiso con una educación más inclusiva,
+              innovadora y sostenible, demostrando que los residuos pueden convertirse en
+              herramientas para transformar el futuro de miles de estudiantes.
+            </p>
+            <Button href={KUNAN_ARTICLE_URL} target="_blank" rel="noopener noreferrer">
+              Conoce más sobre este reconocimiento
+            </Button>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-cream px-6 py-24">
         <div className="mx-auto max-w-[1180px]">
@@ -267,20 +330,16 @@ export default function Home() {
           <p className="mb-6 text-xs font-bold tracking-[0.15em] text-grass uppercase">
             Aliados y articulación institucional
           </p>
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-            {partnerLogos.map((label) => (
-              <div
-                key={label}
-                className="flex h-[74px] items-center justify-center rounded-xl border border-dashed border-grass/30 px-2 text-center font-mono text-[11px] font-semibold text-ink/45"
+          <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {partnerLogos.map(({ src, name }) => (
+              <li
+                key={src}
+                className="flex h-[104px] items-center justify-center rounded-xl border border-grass/15 bg-white px-4 py-3"
               >
-                {label}
-              </div>
+                <img src={src} alt={name} loading="lazy" className="max-h-full max-w-full object-contain" />
+              </li>
             ))}
-          </div>
-          <p className="mt-4 text-[13px] text-ink/55">
-            Solo se muestran como referencias de trayectoria previa del equipo las organizaciones
-            listadas en Nosotros.
-          </p>
+          </ul>
         </div>
       </section>
 
