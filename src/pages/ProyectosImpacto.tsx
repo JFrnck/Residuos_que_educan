@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { EcotecBanner } from "@/components/sections/EcotecBanner";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { otherActions, projects, projectsIntro, type Project } from "@/data/projects";
 import { closingLine } from "@/data/site";
@@ -131,6 +132,8 @@ export default function ProyectosImpacto() {
           </div>
         </div>
       </section>
+
+      <EcotecBanner tone="white" />
 
       <FinalCTA
         title={closingLine}

@@ -32,6 +32,14 @@ export const legalIdentity = {
   resolution: "Resolución de Intendencia N.º 0590050005705-SUNAT",
 } as const;
 
+// Logo de ECOTEC PERÚ: al tener el archivo (p. ej. /images/ecotec-peru.webp) basta con
+// poner su ruta en `logo` y se muestra en el bloque "Esta iniciativa es parte de ECOTEC PERÚ".
+export const ecotec = {
+  name: "ECOTEC PERÚ",
+  fullName: "Patronato de Educación, Ecología, Economía Social y Tecnología",
+  logo: undefined as string | undefined,
+} as const;
+
 export const legalRoutes = [
   { label: "Política de Privacidad", to: "/politica-privacidad" },
   { label: "Términos y Condiciones", to: "/terminos" },

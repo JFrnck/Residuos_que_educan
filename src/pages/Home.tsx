@@ -11,6 +11,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { StatBanner } from "@/components/sections/StatBanner";
 import { GoalStats } from "@/components/sections/GoalStats";
 import { TaxDeductionBlock } from "@/components/sections/TaxDeductionBlock";
+import { EcotecBanner } from "@/components/sections/EcotecBanner";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { homeModelSteps } from "@/data/steps";
 import { closingLine, legalIdentity } from "@/data/site";
@@ -342,6 +343,8 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      <EcotecBanner tone="white" className="pt-0" />
 
       <FinalCTA
         title={closingLine}

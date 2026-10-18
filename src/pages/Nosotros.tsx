@@ -77,7 +77,7 @@ export default function Nosotros() {
         </div>
       </section>
 
-      <section className="bg-white px-6 py-20">
+      <section id="organizacion" className="scroll-mt-24 bg-white px-6 py-20">
         <div className="mx-auto max-w-3xl">
           <SectionHeader kicker="Institucional" title="Nuestra organización" />
           <p className="mt-6 mb-4 text-[17px] leading-relaxed">
