@@ -54,7 +54,7 @@ export function Header() {
             <Logo />
           </NavLink>
 
-          <nav className="hidden items-center gap-5 text-[14.5px] font-semibold lg:flex">
+          <nav className="hidden items-center gap-5 text-[14.5px] font-semibold xl:flex">
             {nav.map((item) => (
               <NavLink
                 key={item.to}
@@ -72,7 +72,7 @@ export function Header() {
             ))}
           </nav>
 
-          <Button to="/aliados" className="hidden shrink-0 lg:inline-flex">
+          <Button to="/aliados" className="hidden shrink-0 xl:inline-flex">
             Donar Residuos
           </Button>
 
@@ -81,7 +81,7 @@ export function Header() {
             onClick={() => setMenuOpen(true)}
             aria-label="Abrir menú"
             aria-expanded={menuOpen}
-            className="flex h-12 w-12 flex-col items-center justify-center gap-1.5 rounded-xl border border-grass/30 lg:hidden"
+            className="flex h-12 w-12 flex-col items-center justify-center gap-1.5 rounded-xl border border-grass/30 xl:hidden"
           >
             <span className="block h-[2.5px] w-6 rounded-full bg-grass" />
             <span className="block h-[2.5px] w-6 rounded-full bg-grass" />

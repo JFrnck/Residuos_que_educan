@@ -21,25 +21,6 @@ const trajectoryPartners = [
   "UGEL Arequipa Sur",
 ];
 
-const eyeCampaign = {
-  title: "Campaña “Ojos por el Planeta”",
-  description:
-    "En alianza con la empresa social DOT Glasses (República Checa) y la Comisaría de la Policía Nacional del Perú de Ciudad Municipal (Arequipa), realizamos mediciones visuales y entregamos lentes personalizados a más de 60 personas adultas mayores.",
-};
-
-const impactActions = [
-  {
-    title: "Implementación tecnológica",
-    description:
-      "Sistema de videovigilancia para la I.E. Manuel Muñoz Najar. Sistema digital de control de asistencia para las I.E. Nicanor Rivera Cáceres e Independencia Americana.",
-  },
-  {
-    title: "Articulación institucional",
-    description:
-      "El proyecto ha sido presentado ante especialistas de la Gerencia Regional de Educación de Arequipa, la UGEL Arequipa Norte y la UGEL Arequipa Sur.",
-  },
-];
-
 const phases = [
   {
     status: "✓ Completada",
@@ -231,36 +212,6 @@ export default function Nosotros() {
               alt="Presentación del modelo en la Cámara de Comercio de Arequipa"
               caption="Presentación del modelo en la Cámara de Comercio de Arequipa"
             />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-cream px-6 py-20">
-        <div className="mx-auto max-w-[1180px]">
-          <SectionHeader kicker="Impacto" title="Nuestro impacto — acciones desarrolladas" />
-          <p className="mt-6 mb-9 max-w-3xl text-[17px] leading-relaxed">
-            Durante nuestra trayectoria hemos impulsado iniciativas que demuestran el impacto
-            positivo de la tecnología, la sostenibilidad y la articulación entre organizaciones
-            públicas y privadas.
-          </p>
-          <Card className="mb-6 grid grid-cols-1 items-center gap-8 sm:grid-cols-2">
-            <ImageWithCaption
-              src="/images/ojos-planeta.jpg"
-              alt="Campaña Ojos por el Planeta — medición visual a persona adulta mayor"
-              aspect="4/3"
-            />
-            <div>
-              <h3 className="mb-3 text-lg font-extrabold text-grass">{eyeCampaign.title}</h3>
-              <p className="text-[15.5px] leading-relaxed">{eyeCampaign.description}</p>
-            </div>
-          </Card>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {impactActions.map((action) => (
-              <Card key={action.title}>
-                <h3 className="mb-3 text-lg font-extrabold text-grass">{action.title}</h3>
-                <p className="text-[15.5px] leading-relaxed">{action.description}</p>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

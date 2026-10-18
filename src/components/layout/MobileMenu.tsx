@@ -69,7 +69,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
       animate={open ? "open" : "closed"}
       variants={shouldReduceMotion ? reducedMotionVariants : panelVariants}
       className={cn(
-        "fixed inset-0 z-90 overflow-y-auto bg-cream px-6 pt-6 pb-14 lg:hidden",
+        "fixed inset-0 z-90 overflow-y-auto bg-cream px-6 pt-6 pb-14 xl:hidden",
         open ? "pointer-events-auto" : "pointer-events-none",
       )}
     >

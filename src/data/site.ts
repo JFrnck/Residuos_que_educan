@@ -3,6 +3,7 @@ import { FaInstagram } from "react-icons/fa6";
 export const nav = [
   { label: "Inicio", to: "/" },
   { label: "Nosotros", to: "/nosotros" },
+  { label: "Proyectos e impacto", to: "/proyectos-e-impacto" },
   { label: "Cómo Funciona", to: "/como-funciona" },
   { label: "Beneficios", to: "/beneficios" },
   { label: "Aliados", to: "/aliados" },

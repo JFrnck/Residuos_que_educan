@@ -5,6 +5,7 @@ import RouteError from "@/pages/RouteError";
 
 const Home = lazy(() => import("@/pages/Home"));
 const Nosotros = lazy(() => import("@/pages/Nosotros"));
+const ProyectosImpacto = lazy(() => import("@/pages/ProyectosImpacto"));
 const ComoFunciona = lazy(() => import("@/pages/ComoFunciona"));
 const Beneficios = lazy(() => import("@/pages/Beneficios"));
 const Aliados = lazy(() => import("@/pages/Aliados"));
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "nosotros", element: <Nosotros /> },
+      { path: "proyectos-e-impacto", element: <ProyectosImpacto /> },
       { path: "como-funciona", element: <ComoFunciona /> },
       { path: "beneficios", element: <Beneficios /> },
       { path: "aliados", element: <Aliados /> },
