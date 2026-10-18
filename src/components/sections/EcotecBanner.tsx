@@ -16,14 +16,6 @@ export function EcotecBanner({ tone = "cream", className }: EcotecBannerProps) {
       className={cn("px-6 py-16", tone === "cream" ? "bg-cream" : "bg-white", className)}
     >
       <Reveal className="mx-auto flex max-w-[1180px] flex-col items-center gap-8 rounded-3xl border border-grass/15 bg-white px-8 py-10 text-center shadow-[0_2px_10px_rgba(0,75,74,0.06)] md:flex-row md:text-left">
-        {ecotec.logo && (
-          <img
-            src={ecotec.logo}
-            alt={`Logo de ${ecotec.name}`}
-            loading="lazy"
-            className="h-20 w-auto shrink-0 object-contain"
-          />
-        )}
         <div className="flex-1">
           <h2
             id="ecotec-banner-title"
