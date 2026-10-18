@@ -1,3 +1,5 @@
+import { FaInstagram } from "react-icons/fa6";
+
 export const nav = [
   { label: "Inicio", to: "/" },
   { label: "Nosotros", to: "/nosotros" },
@@ -10,22 +12,19 @@ export const nav = [
 
 export const contact = {
   email: "direccion@residuosqueeducan.org.pe",
-  address: "Arequipa, Perú", // TODO: dirección exacta
+  address: "Calle Melgar 513, Arequipa, Arequipa, Arequipa",
 } as const;
 
+// Solo redes con cuenta real: Google verifica que cada enlace lleve a una página existente.
 export const social = [
-  { label: "X", href: "#" }, // TODO: URL real
-  { label: "Facebook", href: "#" }, // TODO: URL real
-  { label: "Instagram", href: "#" }, // TODO: URL real
-  { label: "YouTube", href: "#" }, // TODO: URL real
-  { label: "TikTok", href: "#" }, // TODO: URL real
-  { label: "LinkedIn", href: "#" }, // TODO: URL real
+  { label: "Instagram", href: "https://instagram.com/residuosqueeducan", icon: FaInstagram },
 ] as const;
 
 export const legalIdentity = {
   projectName: "RESIDUOS QUE EDUCAN",
+  initiativeOf: "Una iniciativa de ECOTEC PERÚ",
   orgName:
-    "ONG Ecotec Perú – Patronato de Educación, Ecología, Economía Social y Tecnología",
+    "Ecotec Perú – Patronato de Educación, Ecología, Economía Social y Tecnología",
   orgKind: "Organización sin fines de lucro",
   ruc: "RUC N.º 20498319352",
   donationEntity: "Entidad Perceptora de Donaciones autorizada por la SUNAT",

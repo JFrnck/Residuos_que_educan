@@ -6,3 +6,6 @@ dist-ssr
 *.tsbuildinfo
 .env
 .env.local
+
+# Originales de fotos del cliente (pesados, no se versionan)
+resources/RQE-originales

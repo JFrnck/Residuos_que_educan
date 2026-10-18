@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/Card";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ImageWithCaption } from "@/components/ui/ImageWithCaption";
 import { GoalStats } from "@/components/sections/GoalStats";
+import { contact, legalIdentity } from "@/data/site";
 import { useDocumentTitle } from "@/lib/useDocumentTitle";
 
 const founderPills = [
@@ -81,17 +82,11 @@ export default function Nosotros() {
             ¿Quiénes somos?
           </h1>
           <p className="mb-4 text-[17.5px] leading-relaxed">
-            Residuos que Educan es un proyecto ejecutado por la{" "}
-            <strong>
-              ONG Ecotec Perú – Patronato de Educación, Ecología, Economía Social y Tecnología
-            </strong>
-            , organización sin fines de lucro comprometida con la innovación educativa, la
-            economía circular y el desarrollo sostenible.
-          </p>
-          <p className="mb-4 text-[17.5px] leading-relaxed">
-            La organización cuenta con <strong>RUC N.º 20498319352</strong> y está autorizada por
-            la SUNAT como <strong>Entidad Perceptora de Donaciones</strong>, mediante la
-            Resolución de Intendencia N.º 0590050005705-SUNAT.
+            Residuos que Educan es una iniciativa impulsada por <strong>ECOTEC PERÚ</strong> que
+            conecta la gestión responsable de residuos con la transformación educativa. Mediante
+            alianzas con empresas e instituciones educativas, promovemos la valorización de
+            residuos para financiar recursos pedagógicos, desarrollar aulas de innovación y
+            fortalecer las capacidades de docentes y estudiantes.
           </p>
           <p className="text-[17.5px] leading-relaxed">
             Nuestro propósito es cerrar la brecha tecnológica de la educación pública mediante la
@@ -102,6 +97,56 @@ export default function Nosotros() {
       </section>
 
       <section className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-3xl">
+          <SectionHeader kicker="Institucional" title="Nuestra organización" />
+          <p className="mt-6 mb-4 text-[17px] leading-relaxed">
+            Residuos que Educan es una iniciativa impulsada y gestionada por{" "}
+            <strong>
+              ECOTEC PERÚ — Patronato de Educación, Ecología, Economía Social y Tecnología
+            </strong>
+            , organización sin fines de lucro legalmente constituida en el Perú.
+          </p>
+          <p className="mb-4 text-[17px] leading-relaxed">
+            ECOTEC PERÚ es la entidad responsable de la administración y operación del sitio web{" "}
+            <a
+              href="https://www.residuosqueeducan.org.pe"
+              className="font-semibold text-grass underline"
+            >
+              www.residuosqueeducan.org.pe
+            </a>
+            , desde el cual promovemos nuestros programas de educación, sostenibilidad e
+            innovación social.
+          </p>
+          <p className="mb-6 text-[17px] leading-relaxed">
+            A través de nuestras iniciativas, buscamos generar oportunidades educativas y
+            fortalecer el desarrollo sostenible de las comunidades.
+          </p>
+          <Card tone="cream" className="text-[15px] leading-relaxed">
+            <dl className="grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-[auto_1fr]">
+              <dt className="font-bold text-grass">Razón social</dt>
+              <dd>{legalIdentity.orgName}</dd>
+              <dt className="font-bold text-grass">Naturaleza</dt>
+              <dd>{legalIdentity.orgKind}</dd>
+              <dt className="font-bold text-grass">RUC</dt>
+              <dd>20498319352</dd>
+              <dt className="font-bold text-grass">Donaciones</dt>
+              <dd>
+                {legalIdentity.donationEntity} — {legalIdentity.resolution}
+              </dd>
+              <dt className="font-bold text-grass">Dirección</dt>
+              <dd>{contact.address}</dd>
+              <dt className="font-bold text-grass">Correo</dt>
+              <dd>
+                <a href={`mailto:${contact.email}`} className="break-all text-grass underline">
+                  {contact.email}
+                </a>
+              </dd>
+            </dl>
+          </Card>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 pb-20">
         <div className="mx-auto grid max-w-[1180px] grid-cols-1 gap-7 sm:grid-cols-2">
           <Card tone="cream">
             <h2 className="mb-3.5 text-2xl font-extrabold text-grass">Nuestra Misión</h2>

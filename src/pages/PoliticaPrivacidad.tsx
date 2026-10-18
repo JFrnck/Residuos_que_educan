@@ -19,7 +19,7 @@ export default function PoliticaPrivacidad() {
 
         <div className="flex flex-col gap-7 text-[16px] leading-relaxed text-ink/85">
           <p>
-            {legalIdentity.orgName} ({legalIdentity.ruc}), con domicilio en Arequipa, Perú, es
+            {legalIdentity.orgName} ({legalIdentity.ruc}), con domicilio en {contact.address}, es
             responsable del tratamiento de los datos personales recogidos a través de este sitio
             web en el marco del proyecto Residuos que Educan, de conformidad con la Ley N.º 29733,
             Ley de Protección de Datos Personales del Perú, y su reglamento.

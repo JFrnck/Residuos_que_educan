@@ -1,27 +1,10 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTiktok,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
 import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { contact, nav, social } from "@/data/site";
 import { cn } from "@/lib/cn";
-
-const SOCIAL_ICONS = {
-  X: FaXTwitter,
-  Facebook: FaFacebookF,
-  Instagram: FaInstagram,
-  YouTube: FaYoutube,
-  TikTok: FaTiktok,
-  LinkedIn: FaLinkedinIn,
-} as const;
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,19 +27,18 @@ export function Header() {
             </a>
           </div>
           <div className="flex items-center gap-4">
-            {social.map(({ label, href }) => {
-              const Icon = SOCIAL_ICONS[label as keyof typeof SOCIAL_ICONS];
-              return (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="text-lime hover:text-white"
-                >
-                  <Icon aria-hidden="true" className="h-3.5 w-3.5" />
-                </a>
-              );
-            })}
+            {social.map(({ label, href, icon: Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${label} de Residuos que Educan`}
+                className="text-lime hover:text-white"
+              >
+                <Icon aria-hidden="true" className="h-3.5 w-3.5" />
+              </a>
+            ))}
           </div>
         </div>
       </div>

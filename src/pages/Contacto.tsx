@@ -2,14 +2,6 @@ import { useState } from "react";
 import { useForm, useWatch } from "react-hook-form";
 import { useSearchParams } from "react-router";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTiktok,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { FormField, formInputClasses } from "@/components/ui/FormField";
@@ -19,14 +11,6 @@ import { contactoSchema, type ContactoInput } from "@/lib/schemas";
 import { submitForm, type SubmitState } from "@/lib/submitForm";
 import { useDocumentTitle } from "@/lib/useDocumentTitle";
 
-const SOCIAL_ICONS = {
-  X: FaXTwitter,
-  Facebook: FaFacebookF,
-  Instagram: FaInstagram,
-  YouTube: FaYoutube,
-  TikTok: FaTiktok,
-  LinkedIn: FaLinkedinIn,
-} as const;
 
 const soyOptions = ["Empresa", "Institución educativa", "Otro"] as const;
 
@@ -257,19 +241,27 @@ export default function Contacto() {
                 </li>
               </ul>
               <div className="mt-6 flex gap-4">
-                {social.map(({ label, href }) => {
-                  const Icon = SOCIAL_ICONS[label as keyof typeof SOCIAL_ICONS];
-                  return (
-                    <a key={label} href={href} aria-label={label} className="text-lime hover:text-white">
-                      <Icon aria-hidden="true" className="h-4 w-4" />
-                    </a>
-                  );
-                })}
+                {social.map(({ label, href, icon: Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${label} de Residuos que Educan`}
+                    className="text-lime hover:text-white"
+                  >
+                    <Icon aria-hidden="true" className="h-4 w-4" />
+                  </a>
+                ))}
               </div>
               <div className="mt-6 border-t border-white/15 pt-5 text-xs leading-relaxed text-cream/75">
-                {legalIdentity.orgName}
+                {legalIdentity.initiativeOf}
                 <br />
-                {legalIdentity.ruc} · {legalIdentity.donationEntity}
+                Organización responsable: {legalIdentity.orgName}
+                <br />
+                {legalIdentity.orgKind} · {legalIdentity.ruc}
+                <br />
+                {legalIdentity.donationEntity} · {legalIdentity.resolution}
               </div>
             </Card>
 
