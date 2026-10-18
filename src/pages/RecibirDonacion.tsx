@@ -35,7 +35,7 @@ export default function RecibirDonacion() {
   const onSubmit = async (data: RegistroInstitucionInput) => {
     setStatus("submitting");
     try {
-      await submitForm(data);
+      await submitForm("Registro de institución educativa", data);
       setStatus("success");
       reset();
     } catch {

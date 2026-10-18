@@ -57,7 +57,6 @@ const heroPhotos: CarouselPhoto[] = [
 const KUNAN_ARTICLE_URL = "https://www.mercadonegro.pe/actualidad/desafio-kunan-2026/";
 
 const partnerLogos = [
-  { src: "/images/aliados/desafio-kunan-2026.webp", name: "Desafío Kunan 2026" },
   { src: "/images/aliados/kunan.webp", name: "Kunan — Perú Sostenible" },
   { src: "/images/aliados/michell.webp", name: "Michell & Cía." },
   { src: "/images/aliados/municipalidad-arequipa.webp", name: "Municipalidad Provincial de Arequipa" },

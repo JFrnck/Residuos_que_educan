@@ -44,7 +44,7 @@ export default function Contacto() {
   const onSubmit = async (data: ContactoInput) => {
     setStatus("submitting");
     try {
-      await submitForm(data);
+      await submitForm("Formulario de contacto", data);
       setStatus("success");
       reset();
     } catch {
